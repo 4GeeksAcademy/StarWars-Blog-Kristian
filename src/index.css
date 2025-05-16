@@ -1,3 +1,28 @@
 body {
     background: url("https://t4.ftcdn.net/jpg/01/97/94/41/360_F_197944144_hkdj580hGg9wcY5CJTKHALP97fMX32Jb.jpg");
 }
+body::-webkit-scrollbar {
+    width: 12px;
+  }
+  body::-webkit-scrollbar-track {
+    background: rgb(68,217,232);
+    border-radius: 20px;
+  }
+  body::-webkit-scrollbar-thumb {
+    background-color: rgb(65, 10, 82);
+    border-radius: 20px;
+    border: 3px solid rgb(68,217,232);
+  }
+  /* Colores de barra internas */
+  div::-webkit-scrollbar {
+    width: 10px;
+  }
+  div::-webkit-scrollbar-track {
+    background: rgb(68,217,232);
+    border-radius: 20px;
+  }
+  div::-webkit-scrollbar-thumb {
+    background-color: rgb(65, 10, 82);
+    border-radius: 20px;
+    border: 3px solid rgb(68,217,232);
+  }
