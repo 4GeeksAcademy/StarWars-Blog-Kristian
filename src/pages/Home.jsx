@@ -25,12 +25,12 @@ export const Home = () => {
 	return (
 		<div className="text-center mt-5">
 			<div className="container mt-2">
-				<h2 className="text-danger">Characters</h2>
+				<h2 className="main-title">Characters</h2>
 				<hr/>
 			</div>
 			<div className="container py-2 overflow-auto">
 				<div className="d-flex flex-row flex-nowrap">
-					{store.characters && store.characters.length > 0 && store.characters.map(character => <CharacterCard name={character.name}/> )}
+					{store.characters && store.characters.length > 0 && store.characters.map(character => <CharacterCard name={character.name} uid={character.uid}/> )}
 				</div>
 			</div>	
 		</div>
