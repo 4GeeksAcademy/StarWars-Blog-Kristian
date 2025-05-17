@@ -2,6 +2,7 @@ import { useEffect } from "react";
 import CharacterCard from "../components/CharacterCard.jsx";
 import useGlobalReducer from "../hooks/useGlobalReducer.jsx";
 import PlanetCard from "../components/PlanetCard.jsx";
+import VehicleCard from "../components/VehicleCard.jsx";
 
 export const Home = () => {
 
@@ -31,9 +32,22 @@ export const Home = () => {
 	}
     }
 
+  async function getVehicles() {
+	const response = await fetch("https://www.swapi.tech/api/vehicles")
+
+	if(response.ok){
+		const data = await response.json()
+		dispatch({
+			type: "set_vehicles",
+			payload: {vehicles: data.result}
+		})
+	}
+    }
+
 	useEffect(() => {
 		getCharacters()
 		getPlanets()
+		getVehicles()
 	}, [])
 
 	return (
@@ -54,6 +68,15 @@ export const Home = () => {
 			<div className="container py-2 overflow-auto">
 				<div className="d-flex flex-row flex-nowrap">
 					{store.planets && store.planets.length > 0 && store.planets.map(planet => <PlanetCard name={planet.name} key={planet.uid} uid={planet.uid}/> )}
+				</div>
+			</div>
+			<div className="container mt-2">
+				<h2 className="main-title">Vehicles</h2>
+				<hr/>
+			</div>
+			<div className="container py-2 overflow-auto">
+				<div className="d-flex flex-row flex-nowrap">
+					{store.vehicles && store.vehicles.length > 0 && store.vehicles.map(vehicle => <VehicleCard name={vehicle.name} key={vehicle.uid} uid={vehicle.uid}/> )}
 				</div>
 			</div>
 		</div>
