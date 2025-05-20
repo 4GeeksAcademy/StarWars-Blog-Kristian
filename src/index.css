@@ -50,3 +50,11 @@ body::-webkit-scrollbar {
 .black-font {
   color: black;
 }
+.dropdown-favorites{
+  background-color: rgb(152, 132, 20);
+  color: black;
+}
+.dropdown-item-favorites:hover {
+  color: rgb(152, 132, 20);
+  background-color: black;
+}
