@@ -9,7 +9,7 @@ const VehicleCard = (props) => {
             <img src={`https://raw.githubusercontent.com/breatheco-de/swapi-images/refs/heads/master/public/images/vehicles/${props.uid}.jpg`} className="card-img-top" alt="..." />
             <div className="card-body">
                 <h5 className="card-title">{props.name}</h5>
-                <button className="btn details-button" onClick={() => { navigate(`/vehicles/details/${props.uid}`) }}>Details</button>
+                <button className="btn details-button" onClick={() => { navigate(`/vehicle/details/${props.uid}`) }}>Details</button>
             </div>
         </div>
     );
