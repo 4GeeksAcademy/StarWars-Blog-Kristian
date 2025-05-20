@@ -42,3 +42,6 @@ body::-webkit-scrollbar {
 .details-button:hover {
   background-color: rgb(152, 132, 20);
 }
+.navbar-grey{
+  background-color: gray;
+}
