@@ -16,7 +16,7 @@ const CharacterDetails = () => {
                 <div className="card" style={{ width: "30rem", backgroundColor: "grey" }}>
                     <img src={`https://raw.githubusercontent.com/breatheco-de/swapi-images/refs/heads/master/public/images/people/${uid}.jpg`} className="card-img-top" alt="..." />
                     <div className="car3d-body">
-                        <p className="card-text p-2">
+                        <p className="card-text p-2 black-font">
                             Gender: {character && character.gender}
                             <br/>
                             Birth Year: {character && character.birth_year}

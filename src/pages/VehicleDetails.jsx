@@ -16,7 +16,7 @@ const VehicleDetails = () => {
             <div className="card" style={{ width: "45rem", backgroundColor: "grey" }}>
                 <img src={`https://raw.githubusercontent.com/breatheco-de/swapi-images/refs/heads/master/public/images/vehicles/${uid}.jpg`} className="card-img-top" alt="..." />
                 <div className="car3d-body">
-                    <p className="card-text p-2">
+                    <p className="card-text p-2 black-font">
                         Model: {vehicle && vehicle.model}
                         <br />
                         Manufacturer: {vehicle && vehicle.manufacturer}

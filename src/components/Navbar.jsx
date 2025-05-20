@@ -1,17 +1,20 @@
-import { Link } from "react-router-dom";
-
 export const Navbar = () => {
 
 	return (
 		<nav className="navbar navbar-grey">
 			<div className="container">
-				<Link to="/">
-					<span className="navbar-brand h1">Star Wars Blog</span>
-				</Link>
+				<h3 className="black-font">Star Wars</h3>
 				<div className="ml-auto">
-					<Link to="/demo">
-						<button className="btn details-button">Check the Context in action</button>
-					</Link>
+					<div class="dropdown">
+						<button class="btn details-button" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+							My Favorites <i class="fa-solid fa-arrow-down"></i>
+						</button>
+						<ul class="dropdown-menu">
+							<li><a class="dropdown-item" href="#">Action</a></li>
+							<li><a class="dropdown-item" href="#">Another action</a></li>
+							<li><a class="dropdown-item" href="#">Something else here</a></li>
+						</ul>
+					</div>
 				</div>
 			</div>
 		</nav>

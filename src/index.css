@@ -38,10 +38,15 @@ body::-webkit-scrollbar {
 }
 .details-button {
   background-color: rgb(152, 132, 20);
+  color: black;
 }
 .details-button:hover {
-  background-color: rgb(152, 132, 20);
+  background-color: black;
+  color: rgb(152, 132, 20);
 }
 .navbar-grey{
   background-color: gray;
+}
+.black-font {
+  color: black;
 }
