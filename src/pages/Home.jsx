@@ -39,7 +39,7 @@ export const Home = () => {
 		const data = await response.json()
 		dispatch({
 			type: "set_vehicles",
-			payload: {vehicles: data.result}
+			payload: {vehicles: data.results}
 		})
 	}
     }
