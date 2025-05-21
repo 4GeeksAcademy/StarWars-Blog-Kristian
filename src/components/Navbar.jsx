@@ -10,9 +10,9 @@ export const Navbar = () => {
 							My Favorites <i class="fa-solid fa-arrow-down"></i>
 						</button>
 						<ul class="dropdown-menu dropdown-favorites">
-							<li className="dropdown-item dropdown-item-favorites">Action</li>
-							<li className="dropdown-item dropdown-item-favorites">Another action</li>
-							<li className="dropdown-item dropdown-item-favorites">Something else here</li>
+							<li className="dropdown-item dropdown-item-favorites black-font">Action</li>
+							<li className="dropdown-item dropdown-item-favorites black-font">Another action</li>
+							<li className="dropdown-item dropdown-item-favorites black-font">Something else here</li>
 						</ul>
 					</div>
 				</div>
