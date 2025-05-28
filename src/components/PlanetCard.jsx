@@ -10,6 +10,7 @@ const PlanetCard = (props) => {
             <div className="card-body">
                 <h5 className="card-title black-font">{props.name}</h5>
                 <button className="btn details-button" onClick={() => { navigate(`/planet/details/${props.uid}`) }}>Details</button>
+                <button className="btn details-button m-2"><i class="fa-solid fa-heart"></i></button>
             </div>
         </div>
     );
