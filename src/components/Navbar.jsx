@@ -1,5 +1,9 @@
-export const Navbar = () => {
+import useGlobalReducer from "../hooks/useGlobalReducer";
 
+export const Navbar = () => {
+	const {store, dispatch} = useGlobalReducer()
+	console.log(store.favorites);
+	
 	return (
 		<nav className="navbar navbar-grey">
 			<div className="container">
@@ -11,8 +15,6 @@ export const Navbar = () => {
 						</button>
 						<ul class="dropdown-menu dropdown-favorites">
 							<li className="dropdown-item dropdown-item-favorites black-font">Action</li>
-							<li className="dropdown-item dropdown-item-favorites black-font">Another action</li>
-							<li className="dropdown-item dropdown-item-favorites black-font">Something else here</li>
 						</ul>
 					</div>
 				</div>
