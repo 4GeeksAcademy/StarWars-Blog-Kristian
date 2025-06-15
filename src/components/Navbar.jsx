@@ -12,9 +12,9 @@ export const Navbar = () => {
 						<button class="btn details-button" type="button" data-bs-toggle="dropdown" aria-expanded="false">
 							My Favorites <i class="fa-solid fa-arrow-down"></i>
 						</button>
-						<ul class="dropdown-menu bg-white">
+						<ul class="dropdown-menu dropdown-favorites">
 							{store.favorites.map((favorite, index) => (
-								<li key={index} className="dropdown-item dropdown-favorites">{favorite}</li>
+								<li key={index} className="dropdown-item dropdown-favorites dropdown-item-favorites">{favorite}</li>
 							))}
 						</ul>
 					</div>
