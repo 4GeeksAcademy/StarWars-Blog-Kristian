@@ -2,7 +2,6 @@ import useGlobalReducer from "../hooks/useGlobalReducer";
 
 export const Navbar = () => {
 	const {store, dispatch} = useGlobalReducer()
-	console.log(store.favorites);
 	
 	return (
 		<nav className="navbar navbar-grey">
@@ -13,8 +12,10 @@ export const Navbar = () => {
 						<button class="btn details-button" type="button" data-bs-toggle="dropdown" aria-expanded="false">
 							My Favorites <i class="fa-solid fa-arrow-down"></i>
 						</button>
-						<ul class="dropdown-menu dropdown-favorites">
-							<li className="dropdown-item dropdown-item-favorites black-font">Action</li>
+						<ul class="dropdown-menu bg-white">
+							{store.favorites.map((favorite, index) => (
+								<li key={index} className="dropdown-item dropdown-favorites">{favorite}</li>
+							))}
 						</ul>
 					</div>
 				</div>

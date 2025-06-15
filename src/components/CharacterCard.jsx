@@ -6,11 +6,21 @@ const CharacterCard = (props) => {
     const {store, dispatch} = useGlobalReducer()
     const navigate = useNavigate()
     const handleFavorite = () => {
-        const action = {
-            type: "add_favorite",
-            payload: {newFavorite: props.name}
+        const addedFavorite = store.favorites.includes(props.name)
+
+        if (addedFavorite === true){
+            const action = {
+                type: "remove_favorite",
+                payload: { removingFavorite: props.name }
+            }
+            dispatch(action)
+        } else {
+            const action = {
+                type: "add_favorite",
+                payload: { newFavorite: props.name }
+            }
+            dispatch(action)
         }
-        dispatch(action)
     }
     return (
         <div className="card mx-2" style={{minWidth: "18rem", background: "gray"}}>

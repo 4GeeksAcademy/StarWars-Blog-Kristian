@@ -52,7 +52,13 @@ export default function storeReducer(store, action = {}) {
       const { newFavorite } = action.payload
       return {
         ... store,
-        favorites: {... store.favorites, newFavorite}
+        favorites: [... store.favorites, newFavorite]
+      };
+    case 'remove_favorite':
+      const { removingFavorite } = action.payload
+      return {
+        ... store,
+        favorites: [... store.favorites.filter(name => name !== removingFavorite)]
       }
 
     default:
